@@ -145,7 +145,7 @@ class Model():
         start_time = time.time()
 
         # Data info
-        data = glob('./data/*.{}'.format(self.config['subname']))
+        data = glob('./data/ESC-50-master/audio/*.{}'.format(self.config['subname']))
         batch_idxs = min(len(data), self.config['train_size']) // self.config['batch_size']
         for epoch in xrange(self.counter//batch_idxs, self.config['epoch']):
 
